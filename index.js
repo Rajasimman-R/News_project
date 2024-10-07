@@ -60,7 +60,7 @@ function displayContent(articles){
         contentContainer.appendChild(cardContainer);
     });
 }
-(async ()=>{
+async function render(){
     try{
         const articles=await fetchRandomNews();
         displayContent(articles);
@@ -68,4 +68,5 @@ function displayContent(articles){
         console.error('error in fetchRandomNews ',error);
         return []
     }
-})();
+};
+render();
