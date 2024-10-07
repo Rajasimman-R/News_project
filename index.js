@@ -27,7 +27,7 @@ async function fetchNewsQuries(quries){
 }
 async function fetchRandomNews(){
     try{
-    const apiUrl=`https://newsapi.org/v2/top-headlines?sources=techcrunch&pageSize=10&apiKey=${apiKey}`;
+    const apiUrl=`https://newsapi.org/v2/top-headlines?sources=techcrunch&pageSize=10&apiKey=889429d92af74377957e4541da217d19`;
     const response=await fetch(apiUrl);
     const data=await response.json();
     return data.articles;
