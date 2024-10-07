@@ -38,6 +38,10 @@ async function fetchRandomNews(){
 }
 function displayContent(articles){
     contentContainer.innerHTML='';
+    if (!articles || articles.length === 0) {  // Check if articles is undefined or empty
+        contentContainer.innerHTML = '<p>No articles found</p>';  // Display a message when no articles are available
+        return;
+    }
     articles.forEach((article) => {
         const cardContainer=document.createElement('div');
         cardContainer.classList.add('card-container');
